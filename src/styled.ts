@@ -21,7 +21,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
   }
-  .api {
+  .destinies {
     background-color: #ffffff;
     width: 600px;
     height: 600px;
@@ -30,6 +30,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   .button_submit {
@@ -50,11 +51,5 @@ export const Container = styled.div`
   }
   h1 {
     padding: 30px;
-  }
-
-  .componets {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 `

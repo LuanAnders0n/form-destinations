@@ -38,7 +38,6 @@ export const SelectCountry = () => {
     api
       .get('/country')
       .then(reponse => {
-        console.log(reponse.data)
         setCountries(reponse.data)
       })
       .catch(error => {})

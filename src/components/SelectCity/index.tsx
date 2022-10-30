@@ -37,7 +37,6 @@ export const SelectCity = () => {
     api
       .get('/city')
       .then(response => {
-        console.log(response.data)
         setCieties(response.data)
       })
       .catch(error => {})
