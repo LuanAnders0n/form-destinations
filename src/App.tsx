@@ -8,14 +8,18 @@ import { GlobalStyle } from './styles/global'
 function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(e.currentTarget)
+    alert('Formulario enviado')
   }
 
   return (
     <Container>
       <GlobalStyle />
 
-      <form className="order" onSubmit={handleSubmit}>
+      <form
+        className="order"
+        action="javascript:void(0);"
+        onSubmit={handleSubmit}
+      >
         <FormControl
           sx={{
             '& .MuiTextField-root': { m: 3, width: '25ch' }
