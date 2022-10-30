@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { Theme, useTheme } from '@mui/material/styles'
+import { Container } from './style'
 
 export const SelectCountry = () => {
   const theme = useTheme()
@@ -45,28 +46,30 @@ export const SelectCountry = () => {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-name-label">Paises</InputLabel>
-        <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
-          multiple
-          onChange={handleChange}
-          value={countriesName}
-          input={<OutlinedInput label="countries" />}
-        >
-          {countries.map(countries => (
-            <MenuItem
-              id="paises"
-              key={countries.code}
-              value={countries.name_ptbr}
-              style={getStyles(countries.name_ptbr, countriesName, theme)}
-            >
-              {countries.name_ptbr}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <Container>
+        <FormControl sx={{ m: 1, width: 300 }}>
+          <InputLabel id="demo-multiple-name-label">Paises</InputLabel>
+          <Select
+            labelId="demo-multiple-name-label"
+            id="demo-multiple-name"
+            multiple
+            onChange={handleChange}
+            value={countriesName}
+            input={<OutlinedInput label="countries" />}
+          >
+            {countries.map(countries => (
+              <MenuItem
+                id="paises"
+                key={countries.code}
+                value={countries.name_ptbr}
+                style={getStyles(countries.name_ptbr, countriesName, theme)}
+              >
+                {countries.name_ptbr}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Container>
     </div>
   )
 }

@@ -15,57 +15,46 @@ export const Container = styled.div`
     width: 600px;
     height: 600px;
     border-radius: 30px;
-    border: 5px solid #febd69;
+    border: 7px solid #4b91d1;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .api {
     background-color: #ffffff;
     width: 600px;
     height: 600px;
     border-radius: 30px;
-    border: 5px solid #febd69;
+    border: 7px solid #4b91d1;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  #name,
-  #email,
-  #phone,
-  #cpf {
-    width: 500px;
-    height: 50px;
-    font-size: 30px;
-    background-color: #cdcdcd;
-    border: 1px;
-    margin-top: 30px;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    :focus {
-      background: #ffffff;
-      border: #000000 1px solid;
-    }
   }
 
   .button_submit {
     width: 200px;
     height: 60px;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     background: #ffffff;
     border-radius: 30px;
+    border: 7px;
 
     :hover {
       background: #ffe9e9;
+      border: 5px solid #4b91d1;
     }
+  }
+  h1 {
+    padding: 30px;
+  }
+
+  .componets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
