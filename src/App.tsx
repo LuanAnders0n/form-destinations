@@ -1,15 +1,15 @@
-import { FormControl, TextField } from '@mui/material'
-import React from 'react'
-import { SelectCity } from './components/SelectCity'
-import { SelectCountry } from './components/SelectCountry'
-import { Container } from './styled'
-import { GlobalStyle } from './styles/global'
+import { FormControl, TextField } from '@mui/material';
+import React from 'react';
+import { SelectCity } from './components/SelectCity';
+import { SelectCountry } from './components/SelectCountry';
+import { Container } from './styled';
+import { GlobalStyle } from './styles/global';
 
 function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    alert('Formulario enviado')
-  }
+    e.preventDefault();
+    alert('Formulario enviado');
+  };
 
   return (
     <Container>
@@ -65,7 +65,7 @@ function App() {
         </div>
       </form>
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;

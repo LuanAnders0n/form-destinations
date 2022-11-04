@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   .order {
@@ -52,4 +52,4 @@ export const Container = styled.div`
   h1 {
     padding: 30px;
   }
-`
+`;

@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { api } from '../../services/api'
-import { City } from '../../utils/types'
-import OutlinedInput from '@mui/material/OutlinedInput'
-import InputLabel from '@mui/material/InputLabel'
-import MenuItem from '@mui/material/MenuItem'
-import FormControl from '@mui/material/FormControl'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
-import { Theme, useTheme } from '@mui/material/styles'
-import { Container } from './style'
+import React, { useEffect, useState } from 'react';
+import { api } from '../../services/api';
+import { City } from '../../utils/types';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { Theme, useTheme } from '@mui/material/styles';
+import { Container } from './style';
 
 export const SelectCity = () => {
-  const theme = useTheme()
-  const [cities, setCieties] = useState<City[]>([])
-  const [citiesName, setCitiesName] = React.useState<string[]>([])
+  const theme = useTheme();
+  const [cities, setCieties] = useState<City[]>([]);
+  const [citiesName, setCitiesName] = React.useState<string[]>([]);
 
   const handleChange = (event: SelectChangeEvent<typeof citiesName>) => {
     const {
       target: { value }
-    } = event
+    } = event;
     setCitiesName(
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value
-    )
-  }
+    );
+  };
 
   function getStyles(name: string, citiesName: string[], theme: Theme) {
     return {
@@ -30,17 +30,17 @@ export const SelectCity = () => {
         citiesName.indexOf(name) === -1
           ? theme.typography.fontWeightRegular
           : theme.typography.fontWeightMedium
-    }
+    };
   }
 
   useEffect(() => {
     api
       .get('/city')
       .then(response => {
-        setCieties(response.data)
+        setCieties(response.data);
       })
-      .catch(error => {})
-  }, [])
+      .catch(error => {});
+  }, []);
 
   return (
     <div>
@@ -69,5 +69,5 @@ export const SelectCity = () => {
         </FormControl>
       </Container>
     </div>
-  )
-}
+  );
+};
